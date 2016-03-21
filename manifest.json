@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "Base64Pic",
+  "version": "0.0.1",
+  "author": "weaming",
+  "description": "Encode Picture with Base64.\n\nExt:\n  1. Undirect in google search.\n\nGithub: https://github.com/weaming",
+  "icons": {
+    "48": "icons/b64pic-48.png",
+    "64": "icons/b64pic-64.png",
+    "128": "icons/b64pic-128.png"
+    },
+  "background": {
+    "persistent": false,
+    "scripts": ["eventPage.js"]
+  },
+  "permissions": ["tabs", "https://*.google.com/*"],
+  "browser_action": {
+    "default_title": "用Base64编码你所看到的图片",
+    "default_icon": "icons/b64pic-128.png",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "static/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/*",
+        "*://*.google.com.hk/*"
+      ],
+      "js": ["ext/singleJS/undirect.js"]
+    },
+    {
+      "matches": ["*://*.com/*"],
+      "js": ["ext/singleJS/linkCursor.js"]
+    }
+  ]
+}
