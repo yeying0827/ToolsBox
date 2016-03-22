@@ -1,9 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "Base64Pic",
+  "name": "ToolsBox",
   "version": "0.0.1",
   "author": "weaming",
-  "description": "Encode Picture with Base64.\n\nExt:\n  1. Undirect in google search.\n\nGithub: https://github.com/weaming",
+  "offline_enabled": true,
+  "description": "Encode Picture with Base64.\n\nExt:\n  1. Undirect in google search.\n  2. Google search \"g<TAB>\"",
+  "homepage_url": "https://github.com/weaming/Base64Pic",
+  "omnibox": { "keyword" : "g" },
   "icons": {
     "48": "icons/b64pic-48.png",
     "64": "icons/b64pic-64.png",
@@ -11,9 +14,10 @@
     },
   "background": {
     "persistent": false,
-    "scripts": ["eventPage.js"]
+    "scripts": ["static/js/jquery-2.2.2.min.js", "eventPage.js"]
   },
-  "permissions": ["tabs", "https://*.google.com/*"],
+  "permissions": ["tabs", "clipboardRead", "clipboardWrite", "notifications", "storage"],
+  "content_security_policy": "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
   "browser_action": {
     "default_title": "用Base64编码你所看到的图片",
     "default_icon": "icons/b64pic-128.png",
@@ -31,8 +35,9 @@
       "js": ["ext/singleJS/undirect.js"]
     },
     {
-      "matches": ["*://*.com/*"],
+      "matches": ["*://*/*"],
       "js": ["ext/singleJS/linkCursor.js"]
     }
-  ]
+  ],
+  "options_page": "options.html#settings"
 }
