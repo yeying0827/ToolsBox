@@ -30,11 +30,7 @@ function imageOnClick(info, tab) {
   var img = document.createElement('img');
   img.src = info.srcUrl;
   img.onload = function() {
-    if (info.srcUrl.indexOf("http") == 0){
-        var data = getBase64Image(img);
-    }else {
-        var data = info.srcUrl;
-    }
+    var data = getBase64Image(img);
     var tmp = document.createElement("p")
     tmp.id = "tmp";
     $("body").append(tmp);

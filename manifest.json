@@ -14,7 +14,7 @@
     "128": "icons/b64pic-128.png"
     },
   "background": {
-    "scripts": ["static/js/jquery-2.2.2.min.js", "bg.js"]
+    "scripts": ["static/js/jquery-2.2.2.min.js", "static/js/bg.js"]
   },
   "permissions": ["tabs", "*://*/*","clipboardRead", "clipboardWrite", "notifications", "storage", "contextMenus"],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
