@@ -14,11 +14,10 @@
     "128": "icons/b64pic-128.png"
     },
   "background": {
-    "persistent": false,
-    "scripts": ["static/js/jquery-2.2.2.min.js", "eventPage.js"]
+    "scripts": ["static/js/jquery-2.2.2.min.js", "bg.js"]
   },
   "permissions": ["tabs", "*://*/*","clipboardRead", "clipboardWrite", "notifications", "storage", "contextMenus"],
-  "content_security_policy": "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "browser_action": {
     "default_title": "用Base64编码你所看到的图片",
     "default_icon": "icons/b64pic-128.png",
