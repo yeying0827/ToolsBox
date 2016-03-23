@@ -32,19 +32,18 @@ function imageOnClick(info, tab) {
   img.onload = function() {
     var data = getBase64Image(img);
     var tmp = document.createElement("p")
-    tmp.id = "tmp";
-    $("body").append(tmp);
-    var t = $("#tmp");
-    t.html(data);
+    document.body.appendChild(tmp);
+    tmp.innerHTML = data;
 
     var range = document.createRange();
     range.selectNode(tmp);
     window.getSelection().addRange(range);
     try {
         // Now that we've selected the anchor text, execute the copy command
-        var successful = document.execCommand('copy');
-        var msg = successful ? 'successful' : 'unsuccessful';
-        alert(info.srcUrl + '\n\nParse image ' + msg);
+        var result = document.execCommand('copy');
+        tmp.parentNode.removeChild(tmp);
+        var msg = result ? 'successful' : 'unsuccessful';
+        alert('Parse image ' + msg + '\n\n' + info.srcUrl);
     } catch(err) {
         console.log('Oops, unable to copy');
     }
