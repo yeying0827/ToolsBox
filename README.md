@@ -8,9 +8,11 @@ One chrome extension is combined with `html`, `css`, `js`.The develope key point
 
 - [ToolsBox - Chrome 网上应用店](https://chrome.google.com/webstore/detail/toolsbox/ccklajfbopbcmpfjoggmbgncoaihablh)
 - ID: ccklajfbopbcmpfjoggmbgncoaihablh
-- Sinaapp ink conversion: https://yurl.sinaapp.com/crx.php
+- Sinaapp link conversion: https://yurl.sinaapp.com/crx.php
 - Or: http://chrome-extension-downloader.com/
-- Direct download: https://clients2.google.com/service/update2/crx?response=redirect&prodversion=38.0&x=id%3Dccklajfbopbcmpfjoggmbgncoaihablh%26installsource%3Dondemand%26uc
+- Direct download(Right click and save as):
+ - https://clients2.google.com/service/update2/crx?response=redirect&prodversion=38.0&x=id%3Dccklajfbopbcmpfjoggmbgncoaihablh%26installsource%3Dondemand%26uc
+ - http://chrome-extension-downloader.com/5460405fdb20821c3e85953d4dbb1953/ccklajfbopbcmpfjoggmbgncoaihablh.crx
 
 # ScreenShots
 
